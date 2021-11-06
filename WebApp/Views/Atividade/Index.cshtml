@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Domain.AtividadeModel>
+
+<a class="btn btn-info" asp-area="" asp-controller="Atividade" asp-action="Create">Criar atividade</a>
+
+<div class="container">
+    <h2>Atividades</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Url</th>
+                <th>Registro matrícula</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.id</td>
+                    <td>@item.urlGitHub</td>
+                    <td>@item.rm</td>
+                    <td>@item.nome</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
